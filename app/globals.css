@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 20, 83, 45;  /* green-900 */
+  --background-start-rgb: 240, 253, 244;  /* green-50 */
+  --background-end-rgb: 220, 252, 231;  /* green-100 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets-task_01jqav3bfjecsvasv3b429gbtp-img_1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+@layer base {
+  body {
+    @apply text-green-900;
+  }
+}
+
+@layer components {
+  .progress-bar {
+    @apply relative h-2 bg-gray-200 rounded-full overflow-hidden;
+  }
+
+  .progress-bar-fill {
+    @apply absolute top-0 left-0 h-full transition-all duration-300 ease-in-out;
+  }
+
+  .task-card {
+    @apply bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-md border border-green-100/50;
+  }
+
+  .nav-link {
+    @apply flex flex-col items-center space-y-1 transition-colors duration-200;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Remove the main styles since we're handling the container in layout */
