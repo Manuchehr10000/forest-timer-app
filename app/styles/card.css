@@ -1,0 +1,63 @@
+.time-slot-card {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.time-slot-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.time-slot-card.running {
+  border-color: #fbbf24;
+  box-shadow: 0 0 15px rgba(251, 191, 36, 0.2);
+}
+
+.time-slot-card.completed {
+  border-color: #10b981;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+}
+
+.timer-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fbbf24;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.button-primary {
+  background-color: #fbbf24;
+  color: black;
+}
+
+.button-primary:hover {
+  background-color: #f59e0b;
+}
+
+.button-secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.button-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+} 
